@@ -1,27 +1,38 @@
-import { setSelectionRange } from "@testing-library/user-event/dist/utils";
 import React from "react";
 
 export default function Card(props){
-const[totalProducts,setTotalProducts]=React.useState(0)
+const [totalProducts,setTotalProducts]=React.useState("")
 const [product,setProduct]=React.useState(0)
+let total=0
 
 function add(){
     setProduct(product+1)
 }
 function decrement(){
-    setProduct(product-1)
+    if(product>0){
+    setProduct(product-1)}
 }
-function deleteElements(){
+function deleteElements(index){
+
 }
+//setTotalProducts(product)
+
+// React.useEffect(()=>{
+//     if(product>0){
+//         setTotalProducts(totalProducts+1)
+//     }
+// },product)
+  
+  
     return(
-<div>
-    <p>{totalProducts}</p>
+<div className="card3">
+
         <div className="secondBtns">
             
-<p>{product===0?"zero":product}</p>
-<button onClick={add}>+</button>
-<button onClick={decrement}>-</button>
-<button onClick={deleteElements}>del</button>
+<p className="text">{product===0?"Zero":product}</p>
+<button className="addBtn" onClick={add}>+</button>
+<button className="decrementBtn" onClick={decrement}>-</button>
+<button className="deleteBtn" onClick={()=>deleteElements()}><img src="./delete.png"/></button>
         </div>
         </div>
     )
