@@ -1,2 +1,5 @@
-const Data=[0,1,2,3]
+const Data=[
+    {id:1},{id:2},{id:3},{id:4},{id:5}
+    
+]
 export default Data;
