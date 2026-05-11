@@ -3,7 +3,7 @@ import Card from "./Card";
 
 export default function NavBar(props) {
 
-    
+
 
 
     return (
@@ -14,7 +14,7 @@ export default function NavBar(props) {
                 <p className="upNav-text">Items</p>
             </div>
             <button className="refreshBtn" ><img className="refresh-pic" src="./refresh.png" /></button>
-            <button onClick={()=>props.recycleBtn()} className="recycleBtn"><img className="recycle-pic" src="./recyclebtn.png" /></button>
+            <button onClick={() => props.recycleBtn()} className="recycleBtn"><img className="recycle-pic" src="./recyclebtn.png" /></button>
 
         </div>
 
